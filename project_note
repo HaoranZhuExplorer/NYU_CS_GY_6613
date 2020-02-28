@@ -1,15 +1,33 @@
 note
 
-group id in y_train not quite sure what does it mean
-overview: 
+Questions:
+[solved] group id in y_train not quite sure what does it mean -- no meaning, just make it easy of cross-validation
 
+overview: 
 https://medium.com/@eugenekrevenets/aftermath-kaggle-careercon-2019-help-navigate-robots-96a3bc5cf8a2
 
 https://www.kaggle.com/jesucristo/1-smart-robots-complete-compilation/notebook?scriptVersionId=13118932#1.-Starter-code:-#1-Smart-Robots.-Most-Complete-Notebook-%F0%9F%A4%96
 
 
 
-Step1: Get familiar with pytorch
-Step2: Understand the current solution
+Steps:
+Step1: Get familiar with pytorch  [on the way]
+Step2: Understand the current solution [done]
 Step3: Searching papers for Time Series Classification using Deep Learning. Paperwithcode/Google Scholar
 Step4: Try to apply techniques illustrated in the above papers to my project
+
+
+
+AutoML?
+	haven't found a good platform
+
+
+Try to apply muti-channel deep convoluntional neural network (MCDCNN)
+
+
+Performance under different settings:
+	1d CNN tanh 0.6
+	1d CNN ReLU/Softmax(last layer)/Dropout 0.75
+	1d CNN ReLU/Batch Normalization/Dropout 0.7
+	1d CNN PReLU/Batch Normalization/Dropout 0.75
+ 
