@@ -31,3 +31,206 @@ Performance under different settings:
 	1d CNN ReLU/Batch Normalization/Dropout 0.7
 	1d CNN PReLU/Batch Normalization/Dropout 0.75
  
+
+
+MCDCNN
+architecture1: 0.74 epoch=2600
+ class Surface_Classifier(nn.Module):
+    def __init__(self, raw_ni, no, drop=.5):
+        super().__init__()
+        
+        self.conv1d_channel_0 = nn.Sequential(
+            nn.Conv1d(1, 16, 7, 2, 3),
+            nn.BatchNorm1d(16),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    16,  64, 8, 4, 2),
+            nn.BatchNorm1d(64),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    64, 128, 8, 4, 2),
+            nn.BatchNorm1d(128),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(   128, 256, 8, 4, 2),
+            nn.BatchNorm1d(256),
+            nn.PReLU(),
+            nn.Dropout()
+        )
+        
+        self.conv1d_channel_1 = nn.Sequential(
+            nn.Conv1d(1, 16, 7, 2, 3),
+            nn.BatchNorm1d(16),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    16,  64, 8, 4, 2),
+            nn.BatchNorm1d(64),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    64, 128, 8, 4, 2),
+            nn.BatchNorm1d(128),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(   128, 256, 8, 4, 2),
+            nn.BatchNorm1d(256),
+            nn.PReLU(),
+            nn.Dropout()
+        )
+        
+        self.conv1d_channel_2 = nn.Sequential(
+            nn.Conv1d(1, 16, 7, 2, 3),
+            nn.BatchNorm1d(16),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    16,  64, 8, 4, 2),
+            nn.BatchNorm1d(64),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    64, 128, 8, 4, 2),
+            nn.BatchNorm1d(128),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(   128, 256, 8, 4, 2),
+            nn.BatchNorm1d(256),
+            nn.PReLU(),
+            nn.Dropout()
+        )
+        
+        self.conv1d_channel_3 = nn.Sequential(
+            nn.Conv1d(1, 16, 7, 2, 3),
+            nn.BatchNorm1d(16),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    16,  64, 8, 4, 2),
+            nn.BatchNorm1d(64),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    64, 128, 8, 4, 2),
+            nn.BatchNorm1d(128),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(   128, 256, 8, 4, 2),
+            nn.BatchNorm1d(256),
+            nn.PReLU(),
+            nn.Dropout()
+        )
+        
+        self.conv1d_channel_4 = nn.Sequential(
+            nn.Conv1d(1, 16, 7, 2, 3),
+            nn.BatchNorm1d(16),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    16,  64, 8, 4, 2),
+            nn.BatchNorm1d(64),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    64, 128, 8, 4, 2),
+            nn.BatchNorm1d(128),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(   128, 256, 8, 4, 2),
+            nn.BatchNorm1d(256),
+            nn.PReLU(),
+            nn.Dropout()
+        )
+        
+        self.conv1d_channel_5 = nn.Sequential(
+            nn.Conv1d(1, 16, 7, 2, 3),
+            nn.BatchNorm1d(16),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    16,  64, 8, 4, 2),
+            nn.BatchNorm1d(64),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    64, 128, 8, 4, 2),
+            nn.BatchNorm1d(128),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(   128, 256, 8, 4, 2),
+            nn.BatchNorm1d(256),
+            nn.PReLU(),
+            nn.Dropout()
+        )
+        
+        self.conv1d_channel_6 = nn.Sequential(
+            nn.Conv1d(1, 16, 7, 2, 3),
+            nn.BatchNorm1d(16),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    16,  64, 8, 4, 2),
+            nn.BatchNorm1d(64),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    64, 128, 8, 4, 2),
+            nn.BatchNorm1d(128),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(   128, 256, 8, 4, 2),
+            nn.BatchNorm1d(256),
+            nn.PReLU(),
+            nn.Dropout()
+        )
+        
+        self.conv1d_channel_7 = nn.Sequential(
+            nn.Conv1d(1, 16, 7, 2, 3),
+            nn.BatchNorm1d(16),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    16,  64, 8, 4, 2),
+            nn.BatchNorm1d(64),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    64, 128, 8, 4, 2),
+            nn.BatchNorm1d(128),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(   128, 256, 8, 4, 2),
+            nn.BatchNorm1d(256),
+            nn.PReLU(),
+            nn.Dropout()
+        )
+        
+        self.conv1d_channel_8 = nn.Sequential(
+            nn.Conv1d(1, 16, 7, 2, 3),
+            nn.BatchNorm1d(16),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    16,  64, 8, 4, 2),
+            nn.BatchNorm1d(64),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(    64, 128, 8, 4, 2),
+            nn.BatchNorm1d(128),
+            nn.PReLU(),
+            nn.Dropout(),
+            nn.Conv1d(   128, 256, 8, 4, 2),
+            nn.BatchNorm1d(256),
+            nn.PReLU(),
+            nn.Dropout()
+        )
+        
+        self.dense = nn.Sequential(
+            nn.Linear(2304, 128), nn.ReLU(), nn.Dropout(),
+            nn.Linear(128, 64), nn.Softmax(dim=1), 
+            nn.Linear(64, no)
+        )
+            
+
+    def forward(self, t_channel_0, t_channel_1, t_channel_2, t_channel_3, t_channel_4, t_channel_5, t_channel_6, t_channel_7, t_channel_8):
+        conv1d_out_channel_0 = self.conv1d_channel_0(t_channel_0)
+        conv1d_out_channel_1 = self.conv1d_channel_1(t_channel_1)
+        conv1d_out_channel_2 = self.conv1d_channel_2(t_channel_2)
+        conv1d_out_channel_3 = self.conv1d_channel_3(t_channel_3)
+        conv1d_out_channel_4 = self.conv1d_channel_4(t_channel_4)
+        conv1d_out_channel_5 = self.conv1d_channel_5(t_channel_5)
+        conv1d_out_channel_6 = self.conv1d_channel_6(t_channel_6)
+        conv1d_out_channel_7 = self.conv1d_channel_7(t_channel_7)
+        conv1d_out_channel_8 = self.conv1d_channel_8(t_channel_8)
+        
+        t_in = torch.cat([conv1d_out_channel_0,conv1d_out_channel_1, conv1d_out_channel_2, conv1d_out_channel_3, conv1d_out_channel_4, conv1d_out_channel_5, conv1d_out_channel_6, conv1d_out_channel_7, conv1d_out_channel_8], dim=1)
+        res = t_in.view(t_in.size(0), -1)
+       
+        out = self.dense(res)
+        return out
+        
