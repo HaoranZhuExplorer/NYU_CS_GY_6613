@@ -233,4 +233,10 @@ architecture1: 0.74 epoch=2600
        
         out = self.dense(res)
         return out
-        
+
+
+MCDCNN architecture similar to paper 0.74      2 inner convolution
+                                     0.79      3 inner convolution
+                                     0.7 value shifting too large      4 inner convolution  have pooling after each convolution
+                                     0.71 value shifting too large     only two max pooling
+            
